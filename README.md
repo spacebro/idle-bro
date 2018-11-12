@@ -6,6 +6,10 @@ Utility for monitoring a spacebro events and notify state update with a `idle-st
 
 idle-bro is meant to be used as is. You install it, provide a custom configuration file and run it.
 
+You can send a `'get-idle-status'` event to get the idle status in response from `idle-bro`.
+
+Each time a new spacebro client connects, `idle-bro` will broadcast its status.
+
 ##### Install
 ```sh
 $ git clone git@github.com:spacebro/idle-bro.git

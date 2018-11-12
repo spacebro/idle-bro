@@ -31,6 +31,17 @@ function setTimer () {
   }, threshold)
 }
 
+client.on('newClient', () => {
+  setTimeout(() => {
+    client.emit(idle ? 'idle-stop' : 'idle-start')
+  }, 500)
+})
+
+client.on('get-idle-status', () => {
+  client.emit(idle ? 'idle-stop' : 'idle-start')
+})
+
+
 for (let i = 0; i < events.length; i++) {
   const event = events[i]
   client.on(event, (datas) => {
