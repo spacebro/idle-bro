@@ -33,14 +33,13 @@ function setTimer () {
 
 client.on('newClient', () => {
   setTimeout(() => {
-    client.emit(idle ? 'idle-stop' : 'idle-start')
+    client.emit(idle ? 'idle-start' : 'idle-stop')
   }, 500)
 })
 
 client.on('get-idle-status', () => {
-  client.emit(idle ? 'idle-stop' : 'idle-start')
+  client.emit(idle ? 'idle-start' : 'idle-stop')
 })
-
 
 for (let i = 0; i < events.length; i++) {
   const event = events[i]
