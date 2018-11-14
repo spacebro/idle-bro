@@ -2,6 +2,9 @@
   "name": "idle-bro",
   "version": "1.0.0",
   "description": "",
+  "script": {
+    "start": "node index.js"
+  },
   "keywords": [],
   "author": "hugohil",
   "license": "MIT",
